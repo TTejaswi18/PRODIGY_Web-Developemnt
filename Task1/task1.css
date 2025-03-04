@@ -1,0 +1,385 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://images.unsplash.com/photo-1574126154517-d1e0d89ef734?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent background */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Change background color on scroll */
+.navbar.scrolled {
+    background-color: #222; /* Darker background when scrolled */
+}
+
+/* Left-aligned navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: auto; /* Push nav-links to the far left */
+}
+
+.nav-links li {
+    margin: 0 10px; /* Spacing between links */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    padding: 10px 15px; /* Adjust padding */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect for navigation links */
+.nav-links a:hover {
+    background-color: #ff6b6b; /* Change background color on hover */
+    color: #fff; /* Change font color on hover */
+}
+
+/* Right-aligned auth links */
+.auth-links {
+    display: flex;
+    gap: 13px; /* Spacing between auth links */
+    margin-left: auto; /* Push auth-links to the far right */
+}
+
+.auth-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    padding: 10px 20px; /* Adjust padding */
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect for auth links */
+.auth-links a:hover {
+    background-color: #ff6b6b; /* Change background color on hover */
+    color: #fff; /* Change font color on hover */
+}
+
+
+/* Category Buttons */
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.category-btn i {
+    font-size: 1.5rem; /* Increase icon size */
+}
+
+.category-btn.active {
+    background-color: #ff4c4c;
+}
+
+.category-btn:hover {
+    background-color: #ff4c4c;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* Menu Section */
+.menu {
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.menu h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.category-btn.active {
+    background-color: #ff4c4c;
+}
+
+.category-btn:hover {
+    background-color: #ff4c4c;
+}
+
+.pizza-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.pizza-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.pizza-item:hover {
+    transform: translateY(-10px);
+}
+
+.pizza-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.pizza-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.pizza-item p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.pizza-item button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.pizza-item button:hover {
+    background-color: #ff4c4c;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .menu h2, .contact h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Login and Signup Sections */
+.login-section, .signup-section {
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    max-width: 400px;
+    margin: 100px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-section h2, .signup-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.login-section form, .signup-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-section input, .signup-section input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-section button, .signup-section button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.login-section button:hover, .signup-section button:hover {
+    background-color: #ff4c4c;
+}
+
+.login-section p, .signup-section p {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.login-section a, .signup-section a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+.login-section a:hover, .signup-section a:hover {
+    text-decoration: underline;
+}
